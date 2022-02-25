@@ -5,12 +5,12 @@
 
 //**********let keyword
 
-let x = 10;
-if (x == 10) {
-    let x = 20;
-    console.log(x); // 20:  reference x inside the block
-}
-console.log(x); // 10: reference at the begining of the script
+// let x = 10;
+// if (x == 10) {
+//     let x = 20;
+//     console.log(x); // 20:  reference x inside the block
+// }
+// console.log(x); // 10: reference at the begining of the script
 
 
 //**********let and var global object
@@ -91,3 +91,38 @@ console.log(x); // 10: reference at the begining of the script
 // console.log(typeof message); // ReferenceError
 // let message; // TDZ ends
 // var myVar;
+
+// ****************************Variable scopes
+
+//---------------------------var ----------------------
+
+// for (var i = 0; i < 5; i++) {
+// 	console.log("Inside:", i);
+// }
+
+// console.log("Outside:", i);
+
+//output
+// Inside: 0 
+// Inside: 1 
+// Inside: 2 
+// Inside: 3 
+// Inside: 4 
+// Outside: 5
+
+//---------------------------let----------------------
+
+// for (let i = 0; i < 5; i++) {
+// 	console.log("Inside:", i);
+// }
+
+// console.log("Outside:", i); //   Uncaught ReferenceError: i is not defined
+
+//output
+
+// Inside: 0
+// Inside: 1
+// Inside: 2
+// Inside: 3
+// Inside: 4
+
